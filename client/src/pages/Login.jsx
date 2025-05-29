@@ -1,3 +1,10 @@
+import React from 'react';
+
 export default function Login() {
-  return <h1>Login Page</h1>;
+  return (
+    <div>
+      <h2>Login</h2>
+      <p>Login form will go here.</p>
+    </div>
+  );
 }
