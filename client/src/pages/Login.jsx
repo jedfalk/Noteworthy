@@ -26,8 +26,8 @@ export default function Login() {
 
   return (
     <div className = "d-flex justify-content-center align-items-center vh-100 login-background">
-      <div className="card shadow p-4" style={{minWidth: '350px'}}></div>
-        <h2 className="text-center mb-4">Please Login To Start Creating Your NoteWorthy</h2>
+      <div className="card shadow p-4" style={{minWidth: '350px'}}>
+        <h2 className="text-dark mb-4 text-center">Please Login To Start Creating Your NoteWorthy</h2>
         <form onSubmit={handleSubmit}>
           <div className="mb-3">
             <label className="form-label">Email:</label>
@@ -49,6 +49,7 @@ export default function Login() {
         </div>
         <button type="submit" className="btn btn-primary w-100 custom-bth">Login</button>
       </form>
+    </div>
     </div>
   );
 }
