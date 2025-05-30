@@ -1,0 +1,9 @@
+.login-background {
+  background-image: url('../images/login-page-image.jpg'); /* Adjust path as needed */
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  height: 100vh;
+  
+}
+

@@ -12,7 +12,7 @@ function App() {
   return (
     <div>
       <Navbar />
-      <div className="container py-4">
+      <div className="login-background py-4">
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="/login" element={<Login />} />
