@@ -6,7 +6,7 @@ const jwt = require('jsonwebtoken');
 const cors = require('cors');
 
 const typeDefs = require('./schemas/typeDefs');
-const resolvers = require('./resolvers');
+const resolvers = require('./schemas/resolvers');
 
 // Read environment variables
 const PORT = process.env.PORT || 5000;
