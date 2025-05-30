@@ -1,7 +1,6 @@
 import React from 'react';
 import navbar from '../components/Navbar';
-import login from '../components/Login';
-import signup from '../components/Signup';
+
 
 export default function Home() {
   return (
