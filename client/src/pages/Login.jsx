@@ -1,7 +1,8 @@
 import React from 'react';
 import { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
-
+import './Pages.css'; // Import your CSS file for styling
+// Assuming you have a CSS file for styling
 
 export default function Login() {
   const [email, setEmail] = useState('');
@@ -25,16 +26,16 @@ export default function Login() {
   };
 
   return (
-    <div className = "d-flex justify-content-center align-items-center vh-100 login-background">
-      <div className="card shadow p-4" style={{minWidth: '350px'}}></div>
-        <h2 className="text-center mb-4">Please Login To Start Creating Your NoteWorthy</h2>
-        <form onSubmit={handleSubmit}>
-          <div className="mb-3">
-            <label className="form-label">Email:</label>
-            <input
-              type="text"
-              className="form-control"
-              value={email}
+      <div className="d-flex justify-content-center align-items-center vh-100">
+        <div className="card shadow p-4" style={{minWidth: '350px'}}>
+          <h2 className="text-dark mb-4 text-center">Please Login To Start Creating Your NoteWorthy</h2>
+          <form onSubmit={handleSubmit}>
+            <div className="mb-3">
+              <label className="form-label">Email:</label>
+              <input
+                type="text"
+                className="form-control"
+                value={email}
               onChange={(e) => setEmail(e.target.value)}
             />
           </div>
@@ -49,6 +50,7 @@ export default function Login() {
         </div>
         <button type="submit" className="btn btn-primary w-100 custom-bth">Login</button>
       </form>
-    </div>
+        </div>
+      </div>
   );
 }
