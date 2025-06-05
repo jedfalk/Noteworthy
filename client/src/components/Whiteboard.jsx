@@ -20,8 +20,8 @@ export default function Whiteboard() {
 
   return (
     <div className="text-center">
-      <h3>Whiteboard</h3>
-      
+      <h3 style={{ color: strokeColor }}>Add A Drawing to your NoteWorthy!</h3>
+
       <div className="mb-3">
         <button onClick={toggleMode} className="btn btn-primary">
           {isEraser ? 'Switch to Draw Mode' : 'Switch to Erase Mode'}
