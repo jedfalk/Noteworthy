@@ -1,7 +1,7 @@
 import { useState } from 'react';
-import { Link } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
 import { useMutation } from '@apollo/client';
-import { ADD_PROFILE } from '../utils/mutations';
+import { SIGNUP_USER } from '../utils/mutations';
 import Auth from '../utils/auth';
 
 const Signup = () => {
@@ -10,8 +10,9 @@ const Signup = () => {
     email: '',
     password: '',
   });
+   const navigate = useNavigate();
 
-  const [addProfile, { error, data }] = useMutation(ADD_PROFILE);
+  const [signupUser, { error, data: mutationData }] = useMutation(SIGNUP_USER);
 
   const handleChange = (event) => {
     const { name, value } = event.target;
@@ -25,11 +26,16 @@ const Signup = () => {
     event.preventDefault();
 
     try {
-      const { data } = await addProfile({
-        variables: { input: { ...formState } },
+       const { data: signupData } = await signupUser({
+        variables: {
+          username: formState.name,
+          email: formState.email,
+          password: formState.password,
+        },
       });
 
-      Auth.login(data.addProfile.token);
+      Auth.login(signupData.signup.token);
+      navigate('/notes');
     } catch (e) {
       console.error(e);
     }
@@ -40,7 +46,7 @@ const Signup = () => {
       <div className="card shadow p-4" style={{ maxWidth: '400px', width: '100%' }}>
         <h4 className="card-header bg-dark text-light p-2 text-center">Sign Up</h4>
         <div className="card-body">
-          {data ? (
+          {mutationData ? (
             <p>
               Success! You may now head <Link to="/">back to the homepage.</Link>
             </p>
