@@ -13,3 +13,9 @@
     min-height: 100vh;
   }
 }
+
+mark {
+  background-color: #facc15;
+  border-radius: 3px;
+  padding: 0 2px;
+}
