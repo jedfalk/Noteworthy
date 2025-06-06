@@ -123,7 +123,7 @@ export default function Notes() {
           <h4>Saved Note</h4>
           <p><strong>Title:</strong> {data.addNote.title}</p>
           <p><strong>Body:</strong> <span /></p>
-          <small>Created At: {new Date(data.addNote.createdAt).toLocaleString()}</small>
+          <small>Created At: {new Date().toLocaleString()}</small>
         </div>
       )}
 
