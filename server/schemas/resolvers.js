@@ -21,6 +21,8 @@ const resolvers = {
       const hashedPassword = await bcrypt.hash(password, 10);
       const user = await User.create({ username, email, password: hashedPassword });
       const token = signToken(user);
+      console.log('user created:', user);
+      console.log('token created:', token);
       return { token, user };
     },
 
