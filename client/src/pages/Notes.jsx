@@ -122,8 +122,9 @@ export default function Notes() {
         <div className="note-preview card mt-4 p-3">
           <h4>Saved Note</h4>
           <p><strong>Title:</strong> {data.addNote.title}</p>
-          <p><strong>Body:</strong> <span /></p>
-          <small>Created At: {new Date().toLocaleString()}</small>
+          <p><strong>Body:</strong><span>{data.addNote.body}</span></p>
+          <small>Created At: {new Date(data.addNote.createdAt).toLocaleString()}</small>
+
         </div>
       )}
 
