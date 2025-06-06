@@ -3,7 +3,6 @@ import { useMutation } from '@apollo/client';
 import { ADD_NOTE } from '../utils/mutations';
 import Auth from '../utils/auth';
 import './Pages.css';
-import Whiteboard from '../components/Whiteboard.jsx';
 import Noteheader from '../components/Noteheader.jsx';
 
 export default function Notes() {
@@ -125,12 +124,12 @@ export default function Notes() {
           <p><strong>Title:</strong> {data.addNote.title}</p>
           <p><strong>Body:</strong><span>{data.addNote.body}</span></p>
           <small>Created At: {new Date(data.addNote.createdAt).toLocaleString()}</small>
+
         </div>
       )}
 
       <div className="container mt-4">
-        <h2>Your Notes</h2>
-        <Whiteboard />
+        <h2>Your Notes</h2>  
       </div>
     </div>
   );

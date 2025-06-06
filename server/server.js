@@ -53,6 +53,13 @@ async function startServer() {
   } catch (error) {
     console.error('MongoDB connection error:', error);
   }
+if (process.env.NODE_ENV === 'production') {
+  app.use(express.static(path.join(__dirname, '../client/build')));
+
+   app.get('*', (_req, res) => {
+    res.sendFile(path.join(__dirname, '../client/build/index.html'));
+  });
+}
 
   app.listen(PORT, () => {
     console.log(`Server running at http://localhost:${PORT}${server.graphqlPath}`);
