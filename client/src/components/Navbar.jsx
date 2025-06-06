@@ -25,6 +25,7 @@ export default function Navbar() {
             <Link className="btn btn-outline-light me-2 my-1" to="/notes">My Notes</Link>
             <Link className="btn btn-outline-light me-2 my-1" to="/login">Login</Link>
             <Link className="btn btn-outline-light my-1" to="/signup">Sign Up</Link>
+            <Link className="btn btn-outline-light my-1" to="/whiteboard">Whiteboard</Link>
           </div>
         </div>
       </div>
