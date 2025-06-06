@@ -4,6 +4,7 @@ const { ApolloServer } = require('apollo-server-express');
 const mongoose = require('mongoose');
 const jwt = require('jsonwebtoken');
 const cors = require('cors');
+const path = require('path');
 
 const typeDefs = require('./schemas/typeDefs');
 const resolvers = require('./schemas/resolvers');
