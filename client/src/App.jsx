@@ -7,6 +7,7 @@ import Login from './pages/Login';
 import Signup from './pages/Signup';
 import Notes from './pages/Notes';
 import NotFound from './pages/NotFound';
+import Whiteboard from '../src/components/Whiteboard';
 
 function App() {
   return (
@@ -20,6 +21,7 @@ function App() {
             <Route path="/signup" element={<Signup />} />
             <Route path="/notes" element={<Notes />} />
             <Route path="*" element={<NotFound />} />
+            <Route path="/whiteboard" element={<Whiteboard />} />
           </Routes>
         </div>
       </div>
