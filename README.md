@@ -46,7 +46,7 @@ This project is licensed under the [MIT](https://opensource.org/licenses/MIT) li
 - Highlight important text
 - Sketch pad for creative expression
 - User authentication (sign up / log in)
-- Responsive design for mobile and desktop
+
 
 ## Questions
 If you have any questions please contact the website contributors.
